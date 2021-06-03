@@ -14,7 +14,7 @@ def lambda_handler(event, context):
     
     table1.put_item(
        Item={
-            'clientID': '+35269199741713',
+            'clientID': '+3526919974xxx',
             'clientName': 'Marius',
             'clientPolicies': ['car','house']
         }
@@ -22,7 +22,7 @@ def lambda_handler(event, context):
     
     table1.put_item(
        Item={
-            'clientID': '+3526919974171',
+            'clientID': '+3526919974xxx',
             'clientName': 'John',
             'clientPolicies': ['boat','pet']
         }
