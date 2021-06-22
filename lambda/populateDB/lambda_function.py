@@ -12,9 +12,10 @@ def lambda_handler(event, context):
     policiesTable = os.environ['policiesTable']
     table2 = dynamodb.Table(policiesTable)
     
+    # Phone numbers should follow international format E.164
     table1.put_item(
        Item={
-            'clientID': '+3526919974xxx',
+            'clientID': '+3526919xxxxxx',
             'clientName': 'Marius',
             'clientPolicies': ['car','house']
         }
@@ -22,7 +23,7 @@ def lambda_handler(event, context):
     
     table1.put_item(
        Item={
-            'clientID': '+3526919974xxx',
+            'clientID': '+3526919xxxxxx',
             'clientName': 'John',
             'clientPolicies': ['boat','pet']
         }
