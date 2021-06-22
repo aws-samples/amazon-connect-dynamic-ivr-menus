@@ -68,16 +68,16 @@ export class CdkAppStack extends cdk.Stack {
      * Grant Full permission to customerInfoDb from Funtion getCustomerDetails and selectionFulfilment
      */
 
-    customerInfoDb.grantFullAccess(getCustomerDetails);
-    customerInfoDb.grantFullAccess(selectionFulfilment);
-    customerInfoDb.grantFullAccess(populateDB);
+    customerInfoDb.grantReadWriteData(getCustomerDetails);
+    customerInfoDb.grantReadWriteData(selectionFulfilment);
+    customerInfoDb.grantReadWriteData(populateDB);
 
     /**
      * Grant Full permission to policiesDb from Funtion selectionFulfilment
      */
 
-    policiesDb.grantFullAccess(selectionFulfilment);
-    policiesDb.grantFullAccess(populateDB);
+    policiesDb.grantReadWriteData(selectionFulfilment);
+    policiesDb.grantReadWriteData(populateDB);
 
   }
 }
